@@ -1,0 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN", "123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ")
+CRYPTO_PAY_TOKEN = os.getenv("CRYPTO_PAY_TOKEN", "mock_crypto_pay_token")
+ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.isdigit()]
+DATABASE_URL = "crypto_payment.db"

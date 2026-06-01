@@ -1,6 +1,6 @@
 # 💼 Nexus Labs — Портфолио проектов
 
-> Репозиторий с реальными проектами по автоматизации, Telegram-ботами и парсингу данных.
+> Репозиторий с реальными проектами по разработке API, автоматизации, Telegram-ботов и парсингу данных.
 > 
 > 🌐 **Сайт**: [nexus-labs.ru](https://rage213.github.io/nexus-labs/) | ✉️ Контакт через сайт
 
@@ -13,18 +13,23 @@
 | [🛒 Telegram-магазин](./tg-shop-bot) | Полноценный интернет-магазин в Telegram с корзиной, SQLite и оплатой | `aiogram 3.x` `aiosqlite` `FSM` |
 | [📈 Парсер цен](./price-tracker-parser) | Асинхронный мониторинг цен с Telegram-уведомлениями | `aiohttp` `asyncio` `BeautifulSoup` |
 | [🤖 CRM-аналитика бот](./crm-analytics-bot) | Telegram-бот для анализа продаж с графиками и отчётами | `aiogram` `SQLite` `matplotlib` |
-| [🔍 Поисковик заказов](./rag-ai-assistant) | Парсинг Telegram-каналов с IT-вакансиями | `pyrogram` `asyncio` |
+| [🔍 AI-ассистент с RAG](./rag-ai-assistant) | Умный Telegram-бот-помощник с базой знаний и векторным поиском | `aiogram` `openai` `vector-store` |
 | [🛡️ Обход антибот-защиты](./anti-bot-scraper) | Продвинутый скрапер с обходом Cloudflare и CAPTCHA | `playwright` `aiohttp` |
-| [📊 WebSocket монитор](./websocket-price-monitor) | Real-time мониторинг бирж через WebSocket | `websockets` `asyncio` |
+| [📊 WebSocket монитор](./websocket-price-monitor) | Real-time мониторинг криптовалютных бирж через WebSocket | `websockets` `asyncio` |
+| [⚡ FastAPI Analytics API](./fastapi-analytics-api) | Аналитический REST API для сбора и агрегации метрик ботов | `FastAPI` `aiosqlite` `Pydantic v2` |
+| [💳 Crypto Payment Bot](./crypto-payment-bot) | Телеграм-магазин с приёмом криптоплатежей и автовыдачей | `aiogram 3.x` `CryptoBot API` `aiohttp` |
+| [📅 Auto-Posting Bot](./auto-posting-bot) | Бот автопостинга в Telegram-каналы по расписанию с очередью задач | `aiogram 3.x` `APScheduler` `SQLAlchemy` |
+| [🛡️ Chat Moderation Bot](./chat-moderation-bot) | Бот модерации чатов с капчей для новых участников и антиспамом | `aiogram 3.x` `aiosqlite` `regex` |
 
 ---
 
 ## 🛠️ Стек технологий
 
 ```
-Python 3.11+     │  aiogram 3.x    │  aiohttp / asyncio
-SQLite / aiosqlite │  BeautifulSoup │  Playwright
-pyrogram         │  websockets     │  matplotlib
+Python 3.11+       │  aiogram 3.x      │  FastAPI / Pydantic v2
+SQLite / aiosqlite │  BeautifulSoup   │  Playwright / scraping
+pyrogram           │  websockets       │  matplotlib / charts
+APScheduler        │  SQLAlchemy       │  Crypto Payment integration
 ```
 
 ---
