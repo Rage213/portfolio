@@ -41,4 +41,4 @@ pyrogram         │  websockets     │  matplotlib
 ## 📬 Контакты
 
 - 🌐 Сайт: [nexus-labs.ru](https://rage213.github.io/nexus-labs/)
-- 💬 Telegram: [@Rage213](https://t.me/Rage213)
+- 💬 Telegram: [@knrcharge](https://t.me/knrcharge)
