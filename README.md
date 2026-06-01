@@ -26,6 +26,7 @@
 | [💳 Crypto Payment Bot](./crypto-payment-bot) | Телеграм-магазин с приёмом криптоплатежей и автовыдачей | `aiogram 3.x` `CryptoBot API` `aiohttp` |
 | [📅 Auto-Posting Bot](./auto-posting-bot) | Бот автопостинга в Telegram-каналы по расписанию с очередью задач | `aiogram 3.x` `APScheduler` `SQLAlchemy` |
 | [🛡️ Chat Moderation Bot](./chat-moderation-bot) | Бот модерации чатов с капчей для новых участников и антиспамом | `aiogram 3.x` `aiosqlite` `regex` |
+| [📥 Feedback Support Bot](./feedback-support-bot) | Бот обратной связи с администратором через нативный Reply | `aiogram 3.x` `aiosqlite` `FSM` |
 
 ---
 
