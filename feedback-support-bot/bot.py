@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 from aiogram import Bot, Dispatcher
-from aiogram.webhook.aiohttp_impl import SimpleRequestHandler, setup_application
+from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
 
 from config import BOT_TOKEN, WEBHOOK_HOST, WEBHOOK_PATH, WEB_SERVER_HOST, WEB_SERVER_PORT
