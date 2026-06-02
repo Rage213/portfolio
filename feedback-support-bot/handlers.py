@@ -141,11 +141,7 @@ async def process_admin_state_reply(message: Message, state: FSMContext):
     ticket_id = data.get("reply_ticket_id")
     
     # Загружаем инфо о тикете по ID
-    async with aiosqlite.connect(database.DATABASE_URL) as db:
-        db.row_factory = aiosqlite.Row
-        async with db.execute("SELECT * FROM tickets WHERE id = ?", (ticket_id,)) as cursor:
-            row = await cursor.fetchone()
-            ticket = dict(row) if row else None
+    ticket = await database.get_ticket(ticket_id)
 
     if not ticket:
         await message.answer("Заявка не найдена.")

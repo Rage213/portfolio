@@ -65,3 +65,11 @@ async def close_ticket(ticket_id: int):
             (ticket_id,)
         )
         await db.commit()
+
+async def get_ticket(ticket_id: int) -> Optional[Dict[str, Any]]:
+    async with aiosqlite.connect(DATABASE_URL) as db:
+        db.row_factory = aiosqlite.Row
+        async with db.execute("SELECT * FROM tickets WHERE id = ?", (ticket_id,)) as cursor:
+            row = await cursor.fetchone()
+            return dict(row) if row else None
+
