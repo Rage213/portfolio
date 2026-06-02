@@ -24,23 +24,32 @@ def is_admin(user_id: int) -> bool:
 async def cmd_start(message: Message):
     await database.add_user(message.from_user.id, message.from_user.username)
     if is_admin(message.from_user.id):
-        await message.answer(
-            "👑 Добро пожаловать в панель администратора бота поддержки!\n\n"
-            "Сюда будут поступать все заявки от пользователей. Вы можете отвечать на них напрямую, используя функцию реплая (ответ на сообщение), либо кликнув по кнопке под заявкой."
-        )
+        try:
+            await message.answer(
+                "👑 Добро пожаловать в панель администратора бота поддержки!\n\n"
+                "Сюда будут поступать все заявки от пользователей. Вы можете отвечать на них напрямую, используя функцию реплая (ответ на сообщение), либо кликнув по кнопке под заявкой."
+            )
+        except Exception as e:
+            print(f"Ошибка ответа админу в cmd_start: {e}")
     else:
-        await message.answer(
-            f"👋 Привет, {message.from_user.full_name}!\n\n"
-            "Это официальный бот обратной связи. Нажмите кнопку ниже, чтобы отправить ваше обращение или задать вопрос администратору.",
-            reply_markup=keyboards.get_user_menu()
-        )
+        try:
+            await message.answer(
+                f"👋 Привет, {message.from_user.full_name}!\n\n"
+                "Это официальный бот обратной связи. Нажмите кнопку ниже, чтобы отправить ваше обращение или задать вопрос администратору.",
+                reply_markup=keyboards.get_user_menu()
+            )
+        except Exception as e:
+            print(f"Ошибка ответа пользователю в cmd_start: {e}")
 
 @router.callback_query(F.data == "create_ticket")
 async def start_create_ticket(call: CallbackQuery, state: FSMContext):
-    await call.message.edit_text(
-        "📝 Введите текст вашего обращения. Постарайтесь описать задачу или вопрос как можно подробнее:",
-        reply_markup=keyboards.get_cancel_keyboard()
-    )
+    try:
+        await call.message.edit_text(
+            "📝 Введите текст вашего обращения. Постарайтесь описать задачу или вопрос как можно подробнее:",
+            reply_markup=keyboards.get_cancel_keyboard()
+        )
+    except Exception as e:
+        print(f"Ошибка изменения сообщения в start_create_ticket: {e}")
     await state.set_state(UserStates.waiting_for_ticket)
 
 @router.callback_query(F.data == "cancel_action")
@@ -66,7 +75,10 @@ async def process_ticket_text(message: Message, state: FSMContext):
     await state.clear()
     
     # Отправляем подтверждение пользователю
-    await message.answer("✅ Ваше обращение успешно отправлено! Ожидайте ответа администратора.")
+    try:
+        await message.answer("✅ Ваше обращение успешно отправлено! Ожидайте ответа администратора.")
+    except Exception as e:
+        print(f"Не удалось отправить подтверждение пользователю: {e}")
 
     # Пересылаем заявку админу
     username_info = f" (@{message.from_user.username})" if message.from_user.username else ""
