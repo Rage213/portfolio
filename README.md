@@ -2,7 +2,7 @@
 
 > Репозиторий с реальными проектами по разработке API, автоматизации, Telegram-ботов и парсингу данных.
 > 
-> 🌐 **Сайт**: [nexus-labs.ru](https://rage213.github.io/nexus-labs/) | ✉️ Контакт через сайт
+> 🌐 **Сайт**: [rage213.github.io/nexus-labs/](https://rage213.github.io/nexus-labs/) | ✉️ Контакт через сайт
 
 > [!WARNING]
 > ### 🛡️ Юридическая защита и Лицензия / Proprietary License
@@ -54,5 +54,5 @@ APScheduler        │  SQLAlchemy       │  Crypto Payment integration
 
 ## 📬 Контакты
 
-- 🌐 Сайт: [nexus-labs.ru](https://rage213.github.io/nexus-labs/)
+- 🌐 Сайт: [rage213.github.io/nexus-labs/](https://rage213.github.io/nexus-labs/)
 - 💬 Telegram: [@knrcharge](https://t.me/knrcharge)
