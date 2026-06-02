@@ -58,8 +58,8 @@ tg-shop-bot/
 
 ### 1. Клонирование и переход в папку проекта:
 ```bash
-git clone https://github.com/Rage213/nexus-labs.git
-cd resilient-kepler/portfolio-projects/tg-shop-bot/
+git clone https://github.com/Rage213/portfolio.git
+cd portfolio/tg-shop-bot/
 ```
 
 ### 2. Установка зависимостей:

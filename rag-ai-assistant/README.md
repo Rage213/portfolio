@@ -41,7 +41,7 @@ rag-ai-assistant/
 
 ### 1. Перейдите в папку проекта:
 ```bash
-cd portfolio-projects/rag-ai-assistant/
+cd rag-ai-assistant/
 ```
 
 ### 2. Установите зависимости:

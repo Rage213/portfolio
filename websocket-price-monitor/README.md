@@ -38,7 +38,7 @@ websocket-price-monitor/
 
 ### 1. Перейдите в папку проекта:
 ```bash
-cd portfolio-projects/websocket-price-monitor/
+cd websocket-price-monitor/
 ```
 
 ### 2. Установите зависимости:

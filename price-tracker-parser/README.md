@@ -47,8 +47,8 @@ price-tracker-parser/
 
 ### 1. Клонирование репозитория:
 ```bash
-git clone https://github.com/Rage213/nexus-labs.git
-cd resilient-kepler/portfolio-projects/price-tracker-parser/
+git clone https://github.com/Rage213/portfolio.git
+cd portfolio/price-tracker-parser/
 ```
 
 ### 2. Установка зависимостей:

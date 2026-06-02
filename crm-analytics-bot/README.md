@@ -40,7 +40,7 @@ crm-analytics-bot/
 
 ### 1. Перейдите в папку проекта:
 ```bash
-cd portfolio-projects/crm-analytics-bot/
+cd crm-analytics-bot/
 ```
 
 ### 2. Установите зависимости:

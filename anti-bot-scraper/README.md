@@ -34,7 +34,7 @@ anti-bot-scraper/
 
 ### 1. Перейдите в папку проекта:
 ```bash
-cd portfolio-projects/anti-bot-scraper/
+cd anti-bot-scraper/
 ```
 
 ### 2. Установите зависимости:
