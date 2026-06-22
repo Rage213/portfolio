@@ -24,8 +24,8 @@
 1. Склонируйте репозиторий.
 2. Скопируйте `.env.example` в `.env` и укажите данные:
    ```env
-   BOT_TOKEN=12345678:AaBbCc...
-   CRYPTO_PAY_TOKEN=mock_crypto_pay_token
+   BOT_TOKEN=your_telegram_bot_token
+   CRYPTO_PAY_TOKEN=your_crypto_pay_token
    ADMIN_IDS=12345678
    ```
 3. Установите зависимости:

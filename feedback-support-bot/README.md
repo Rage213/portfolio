@@ -25,7 +25,7 @@
 1. Склонируйте репозиторий.
 2. Скопируйте `.env.example` в `.env` и укажите данные:
    ```env
-   BOT_TOKEN=12345678:AaBbCc...
+   BOT_TOKEN=your_telegram_bot_token
    ADMIN_ID=12345678
    ```
 3. Установите зависимости:

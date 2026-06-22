@@ -27,7 +27,7 @@
 1. Склонируйте репозиторий.
 2. Скопируйте `.env.example` в `.env` и укажите токен вашего бота:
    ```env
-   BOT_TOKEN=12345678:AaBbCc...
+   BOT_TOKEN=your_telegram_bot_token
    SPAM_THRESHOLD=5
    ```
 3. Установите зависимости:

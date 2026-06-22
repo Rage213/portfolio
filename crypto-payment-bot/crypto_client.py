@@ -23,14 +23,14 @@ class CryptoPayClient:
             "order_id": f"order_{description}", # В реальном API здесь передается уникальный ID заказа
         }
         
-        # Для демонстрации без реального токена возвращаем мок-объект
-        if "mock" in self.token:
+        # Для демонстрации без реального токена возвращаем demo-объект
+        if not self.token:
             import uuid
-            mock_id = str(uuid.uuid4())
+            demo_invoice_id = str(uuid.uuid4())
             return {
                 "result": {
-                    "uuid": mock_id,
-                    "url": f"https://t.me/CryptoBot?start={mock_id}",
+                    "uuid": demo_invoice_id,
+                    "url": f"https://t.me/CryptoBot?start={demo_invoice_id}",
                     "amount": amount,
                     "status": "active"
                 }
@@ -52,7 +52,7 @@ class CryptoPayClient:
         url = f"{self.base_url}/payment/info"
         payload = {"uuid": uuid}
 
-        if "mock" in self.token:
+        if not self.token:
             return {
                 "result": {
                     "uuid": uuid,

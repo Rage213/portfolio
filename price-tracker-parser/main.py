@@ -37,7 +37,7 @@ async def send_telegram_alert(text: str):
     """Sends HTML formatted message alert to the configured Telegram chat."""
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         logger.warning("Telegram notification settings not configured. Alert printed to console instead:")
-        print(f"[TELEGRAM MOCK ALERT]: {text}")
+        print(f"[TELEGRAM DRY RUN ALERT]: {text}")
         return
         
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"

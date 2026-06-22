@@ -26,9 +26,8 @@ class TelegramNotifier:
             f"⚡ _Мониторинг осуществляется Nexus Labs WebSocket Engine._"
         )
 
-        # Skip API call if we're using default mock token
-        if "MOCK" in self.bot_token:
-            print(f"[Notifier MOCK Alert] {symbol} {direction} by {percent_str} (Old: {old_price:.2f}, New: {new_price:.2f})")
+        if not self.bot_token or not self.chat_id:
+            print(f"[Notifier dry run] {symbol} {direction} by {percent_str} (Old: {old_price:.2f}, New: {new_price:.2f})")
             return
 
         try:

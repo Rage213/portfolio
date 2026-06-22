@@ -12,6 +12,5 @@ try:
 except ValueError:
     ADMIN_ID = 0
 
-# Mock credentials for test safety
 if not BOT_TOKEN:
-    BOT_TOKEN = "MOCK_TOKEN"
+    BOT_TOKEN = ""

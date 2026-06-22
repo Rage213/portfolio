@@ -12,8 +12,5 @@ try:
 except (TypeError, ValueError):
     PRICE_CHANGE_THRESHOLD_PERCENT = 0.05
 
-# Setup defaults if missing for local validation
-if not TELEGRAM_BOT_TOKEN:
-    TELEGRAM_BOT_TOKEN = "MOCK_TOKEN"
-if not TELEGRAM_CHAT_ID:
-    TELEGRAM_CHAT_ID = "MOCK_CHAT_ID"
+TELEGRAM_BOT_TOKEN = TELEGRAM_BOT_TOKEN or ""
+TELEGRAM_CHAT_ID = TELEGRAM_CHAT_ID or ""
